@@ -15,7 +15,7 @@ public class Main {
 		tree.Start();
 		
 		long lastUpdateTime = System.currentTimeMillis();
-		long updateSpeed = (long) 1000; // milliseconds
+		long updateSpeed = (long) 1000; // milliseconds 
 		
 		while( !bb.chainOfEvents.isEmpty() ) {
 

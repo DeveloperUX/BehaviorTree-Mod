@@ -1,0 +1,8 @@
+@ Leaf nodes are primitive behaviors ("throw grenade").
+@ Internal nodes are abstract behaviors ("attack").
+@ Be careful with “state-like” behaviors that keep running.
+@ A Node with a "Precondition" that fails will not run nor have its children run.
+@ A Behavior can have a "priority" method to tell the system which behavior to run.
+@ Branches made up of Composite Nodes and Conditions, and Actions sit in the leaf nodes.
+@ Currently have Selectors and Sequences, try to create Random Selectors and Priority Selectors
+	@ Can do this using TaskDecorator, look at "ChanceDecorator" for an example

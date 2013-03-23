@@ -1,0 +1,39 @@
+AI Logic:
+
+Retrieve Flag
+	Is Flag Captured?
+	Locate (Flag Bearer)
+	-Chase (Flag Bearer)	
+Capture Flag
+	Is Flag At Base?
+	Move In Direction (Flag)
+Chase
+	Enemy Nearby?
+	Locate Enemy
+	Predict Future Position
+	Move In Direction of Position
+	-Combat
+Evade
+	Enemy Behind Me?
+	Locate Enemy
+	Predict Future Position
+	Move In Opposite Direction
+Combat		
+	Enemy In Range?
+	Sufficient Ammo?
+		Fire
+	Insufficient Ammo?
+		Switch
+	
+	
+Combat
+Capture
+Retrieve
+Dodge
+Fire
+Switch
+LockOn
+Scout
+Backup
+Locate
+Ram
