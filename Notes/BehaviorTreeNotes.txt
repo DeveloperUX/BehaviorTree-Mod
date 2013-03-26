@@ -1,8 +1,28 @@
-@ Leaf nodes are primitive behaviors ("throw grenade").
-@ Internal nodes are abstract behaviors ("attack").
-@ Be careful with “state-like” behaviors that keep running.
-@ A Node with a "Precondition" that fails will not run nor have its children run.
-@ A Behavior can have a "priority" method to tell the system which behavior to run.
-@ Branches made up of Composite Nodes and Conditions, and Actions sit in the leaf nodes.
-@ Currently have Selectors and Sequences, try to create Random Selectors and Priority Selectors
-	@ Can do this using TaskDecorator, look at "ChanceDecorator" for an example
+Leaf nodes are primitive behaviors ("throw grenade").
+
+Internal nodes are abstract behaviors ("attack").
+
+Be careful with “state-like” behaviors that keep running.
+
+A Node with a "Precondition" that fails will not run nor have its children run.
+
+A Behavior can have a "priority" method to tell the system which behavior to run.
+
+Branches made up of Composite Nodes and Conditions, and Actions sit in the leaf nodes.
+
+Currently have Selectors and Sequences, try to create Random Selectors and Priority Selectors
+	Can do this using TaskDecorator, look at "ChanceDecorator" for an example
+
+	
+	
+Each of these kinds of tests needs to be implemented as a separate task, usually with some parameterization so they can be easily reused. Each Condition returns the success status code if the Condition is met and returns failure otherwise
+
+Most of the time Actions will succeed (if there’s a chance they might not, it is better to use Conditions to check for that before the character starts trying to act). It is possible to write Actions that fail if they can’t complete, however.
+
+The key difference in behavior trees, however, is the use of a single common interface for all tasks. This means that arbitrary Conditions,Actions, and groups can be combined together without any of them needing to know what else is in the behavior tree.
+
+Both Conditions and Actions sit at the leaf nodes of the tree. Most of the branches are made up of Composite nodes. As the name suggests, these keep track of a collection of child tasks (Conditions, Actions, or other Composites), and their behavior is based on the behavior of their children. Unlike Actions and Conditions, there are normally only a handful of Composite tasks because with only a handful of different grouping behaviors we can build very sophisticated behaviors.
+
+Sequences should have many Conditionals first.
+
+
