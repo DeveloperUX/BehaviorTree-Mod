@@ -37,3 +37,80 @@ Scout
 Backup
 Locate
 Ram
+
+
+Root
+
+	Protect Home Flag
+		Close In On Flag 
+			Close Enough? (Inverted)
+			Move Towards (Flag)
+		Wait For Enemy To Approach
+		Chase (Target)
+		
+	Capture Flag
+		Capture
+			Is Enemy Flag at base?
+			Move Towards (Flag Base)			
+		Defend (Teammate)
+			Locate Teammate (Holding Flag)
+			Move Towards (Teammate)
+			Follow (At a Distance)
+
+	Retrieve		
+		Is our flag captured?
+		Chase (Flag Bearer/Target)
+			Locate flag bearer (Target)
+			Chase (Flag Bearer)
+			Move Towards (Target)
+			*Combat
+		Pick Up Flag
+		Move Towards (Base Target)
+		
+	Visible? (Target)
+		
+	Chase
+		Is Enemy? (Target)
+		Move Towards (Target)
+		*Combat
+		
+	Evade (Repeat)
+		Being Chased?
+		Move Towards (Safety/Base)
+		
+	Power Up
+		Locate Health
+		Move To (Health)
+		
+	Combat		
+		Enemy In Range?
+		Attack
+			Sufficient Ammo?
+			Fire
+		Switch Weapon
+		
+	
+	Is our flag captured?
+		locate flag bearer
+		Am I closer to enemy flag than to flag bearer?
+			YES - capture enemy flag
+			NO - Chase enemy flag bearer
+		
+		
+
+	Am I closer to Enemy flag?
+	Is enemy flag at base?
+	Am I close to enemy flag?
+	Am I being chased? (Inverted)
+	Capture enemy flag
+		
+	
+
+locate nearest enemy
+is flag captured?
+	locate flag bearer
+	chase flag bearer
+	
+	
+
+		

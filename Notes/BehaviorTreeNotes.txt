@@ -25,4 +25,8 @@ Both Conditions and Actions sit at the leaf nodes of the tree. Most of the branc
 
 Sequences should have many Conditionals first.
 
+// Genius Idea:
+//	Buy many mangoes and make a large jug of juice
+//	Save jug in the fridge
+
 
