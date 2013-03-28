@@ -1,0 +1,16 @@
+-- Behavior Tree for Actual Gameplay --
+
+:: Gameplay ::
+-Root-
+	Capture The Flag
+		Flag Captured?
+		Change Score
+		Gamer Died?
+		
+		
+	Annihilation
+	
+if died
+	is game over?
+
+:: Screens ::

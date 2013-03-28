@@ -41,7 +41,7 @@ Ram
 
 - Root -
 
-	Protect Home Flag
+	Protect (Home Flag)
 		Close In On Flag 
 			Close Enough? (Target) (Inverted)
 			Move Towards (Flag)
@@ -61,9 +61,8 @@ Ram
 		Is our flag captured?
 		Chase (Flag Bearer/Target)
 			Locate flag bearer (Target)
-			Chase (Flag Bearer)
-			Move Towards (Target)
-			*Combat
+			Pinpoint Target
+			*Chase (Flag Bearer)
 		Pick Up Flag
 		Move Towards (Base Target)
 		
@@ -76,6 +75,7 @@ Ram
 		
 	Evade (Repeat)
 		Being Chased?
+		Pinpoint Safe Location
 		Move Towards (Safety/Base)
 		
 	Power Up
@@ -94,9 +94,7 @@ Ram
 		locate flag bearer
 		Am I closer to enemy flag than to flag bearer?
 			YES - capture enemy flag
-			NO - Chase enemy flag bearer
-		
-		
+			NO - Chase enemy flag bearer	
 
 	Am I closer to Enemy flag?
 	Is enemy flag at base?
