@@ -1,16 +1,34 @@
 -- Behavior Tree for Actual Gameplay --
 
 :: Gameplay ::
--Root-
-	Capture The Flag
-		Flag Captured?
-		Change Score
+	-Root-
+		Capture The Flag
+			Flag Captured?
+			Change Score
 		Gamer Died?
-		
-		
-	Annihilation
+			Wait
+			Recreate Gamer
+			Locate empty corridor
+			Place gamer
+			Invincible
+			Wait
+			Remove invincibility				
+		Annihilation
+			car destroyed?
+			Wait
+			Create Car
+			Locate Empty corridor
+			Place car
 	
-if died
-	is game over?
-
 :: Screens ::
+	Menu Screen
+	Level Selected
+		Play Level
+		Game Over?
+		Show Menu Screen
+
+
+// change		
+int curPos = control.subtasks.indexOf(control.curTask);
+// to
+int curPos = 0;
