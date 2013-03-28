@@ -39,11 +39,11 @@ Locate
 Ram
 
 
-Root
+- Root -
 
 	Protect Home Flag
 		Close In On Flag 
-			Close Enough? (Inverted)
+			Close Enough? (Target) (Inverted)
 			Move Towards (Flag)
 		Wait For Enemy To Approach
 		Chase (Target)
