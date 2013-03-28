@@ -11,7 +11,7 @@ package behavior.tree.library;
  * @author Ying
  *
  */
-public class Sequence extends ParentTask 
+public class Sequence extends Branch 
 {
 	/**
 	 * Creates a new instance of the Sequence class

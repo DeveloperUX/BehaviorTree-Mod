@@ -13,7 +13,7 @@ package behavior.tree.library;
  * @author Ying
  *
  */
-public class Selector extends ParentTask 
+public class Selector extends Branch 
 {
 	/**
 	 * Creates a new instance of the Selector class
@@ -79,10 +79,7 @@ public class Selector extends ParentTask
 		}		
 	}
 
-	/**
-	 * In case of child finishing with sucess, our job here is done, finish with sucess
-	 * as well
-	 */
+	/** In case of child finishing with success, our job here is done, finish with success as well */
 	@Override
 	public void ChildSucceeded() 
 	{

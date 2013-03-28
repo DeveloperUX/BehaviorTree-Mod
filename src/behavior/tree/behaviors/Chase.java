@@ -1,10 +1,10 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 import behavior.tree.library.Blackboard.Event;
 
-public class Chase extends LeafTask {
+public class Chase extends Behavior {
 	
 	int numTurns = 0;
 	int numTurnsDesired = 4;

@@ -1,9 +1,9 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 
-public class SwitchW extends LeafTask {
+public class SwitchW extends Behavior {
 
 	public SwitchW(Blackboard blackboard) {
 		super(blackboard);

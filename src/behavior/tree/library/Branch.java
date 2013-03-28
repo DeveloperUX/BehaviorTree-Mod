@@ -11,14 +11,14 @@ import behavior.tree.additions.Log;
  * @author Ying
  *
  */
-public abstract class ParentTask extends Task 
+public abstract class Branch extends Task 
 {
 	/**
 	 * TaskControler for the parent task
 	 */
-	ParentTaskController control;
+	BranchController control;
 	
-	public ParentTask(Blackboard blackboard)
+	public Branch(Blackboard blackboard)
 	{
 		super(blackboard);
 		CreateController();
@@ -29,7 +29,7 @@ public abstract class ParentTask extends Task
 	 * @param blackboard Reference to the AI Blackboard data
 	 * @param name Name of the class for debugging
 	 */
-	public ParentTask(Blackboard blackboard, String name)
+	public Branch(Blackboard blackboard, String name)
 	{
 		super(blackboard, name);
 		CreateController();
@@ -40,7 +40,7 @@ public abstract class ParentTask extends Task
 	 */
 	private void CreateController()
 	{
-		this.control = new ParentTaskController(this);
+		this.control = new BranchController(this);
 	}
 	
 	/**

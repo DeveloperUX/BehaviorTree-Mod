@@ -5,7 +5,7 @@ import behavior.tree.behaviors.Chase;
 import behavior.tree.behaviors.DodgeWall;
 import behavior.tree.behaviors.WallAhead;
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.ParentTaskController;
+import behavior.tree.library.BranchController;
 import behavior.tree.library.Selector;
 import behavior.tree.library.Sequence;
 import behavior.tree.library.Task;
@@ -47,17 +47,17 @@ public class BehaviorTree {
 		// Avoid Wall actions
 		Task avoidanceSequence = new Sequence(blackboard, "Avoidance");
 //		avoidanceSequence = new RepeatDecorator(blackboard, avoidanceSequence, "Avoid Wall Reset");
-		((ParentTaskController) avoidanceSequence.GetControl()).Add(new WallAhead(blackboard, "Wall Ahead?"));
-		((ParentTaskController) avoidanceSequence.GetControl()).Add(new DodgeWall(blackboard, "Dodge Wall"));
+		((BranchController) avoidanceSequence.GetControl()).Add(new WallAhead(blackboard, "Wall Ahead?"));
+		((BranchController) avoidanceSequence.GetControl()).Add(new DodgeWall(blackboard, "Dodge Wall"));
 		
 		// Ram Car actions
 		Task meleeSequence = new Sequence(blackboard, "Melee");		
-		((ParentTaskController) meleeSequence.GetControl()).Add(new Chase(blackboard, "Car Ahead?"));
-		((ParentTaskController) meleeSequence.GetControl()).Add(new Chase(blackboard, "Ram Car"));
+		((BranchController) meleeSequence.GetControl()).Add(new Chase(blackboard, "Car Ahead?"));
+		((BranchController) meleeSequence.GetControl()).Add(new Chase(blackboard, "Ram Car"));
 		
 		// Add Maneuvering sequences to Selector
-		((ParentTaskController) maneuver.GetControl()).Add( avoidanceSequence );
-		((ParentTaskController) maneuver.GetControl()).Add( meleeSequence );
+		((BranchController) maneuver.GetControl()).Add( avoidanceSequence );
+		((BranchController) maneuver.GetControl()).Add( meleeSequence );
 //		((ParentTaskController) maneuver.GetControl()).Add(new BackAwayFromObstacleTask(blackboard, "Back Up"));
 		
 		// Chase sequence
@@ -65,8 +65,8 @@ public class BehaviorTree {
 //		((ParentTaskController) combatSequence.GetControl()).add(new MoveInDirection(blackboard, "Move In Direction"));
 		
 		// Add to planner
-		((ParentTaskController) root.GetControl()).Add(maneuver);
-		((ParentTaskController) root.GetControl()).Add(combatSequence);
+		((BranchController) root.GetControl()).Add(maneuver);
+		((BranchController) root.GetControl()).Add(combatSequence);
 		
 		// Chase enemy vehicle
 //		Task chaseEnemy = new Sequence(blackboard, "Circle chase sequence");

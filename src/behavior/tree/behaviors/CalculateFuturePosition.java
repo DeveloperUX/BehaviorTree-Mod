@@ -1,9 +1,9 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 
-public class CalculateFuturePosition extends LeafTask {
+public class CalculateFuturePosition extends Behavior {
 
 	public CalculateFuturePosition(Blackboard blackboard) {
 		super(blackboard);

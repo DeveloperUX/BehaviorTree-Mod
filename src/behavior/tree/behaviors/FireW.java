@@ -1,9 +1,9 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 
-public class FireW extends LeafTask {
+public class FireW extends Behavior {
 
 	public FireW(Blackboard blackboard) {
 		super(blackboard);

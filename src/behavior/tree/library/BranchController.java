@@ -8,7 +8,7 @@ import java.util.Vector;
  * @author Ying
  *
  */
-public class ParentTaskController extends TaskController 
+public class BranchController extends TaskController 
 {
 	/**
 	 * Vector of child Task
@@ -24,7 +24,7 @@ public class ParentTaskController extends TaskController
 	 * Creates a new instance of the ParentTaskController class
 	 * @param task
 	 */
-	public ParentTaskController(Task task) 
+	public BranchController(Task task) 
 	{
 		super(task);
 		

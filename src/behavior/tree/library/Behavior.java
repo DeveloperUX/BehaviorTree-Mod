@@ -11,7 +11,7 @@ package behavior.tree.library;
  * @author Ying
  *
  */
-public abstract class LeafTask extends Task 
+public abstract class Behavior extends Task 
 {
 	/**
 	 * Task controler to keep track of the Task state.
@@ -22,7 +22,7 @@ public abstract class LeafTask extends Task
 	 * Creates a new instance of the LeafTask class
 	 * @param blackboard Reference to the AI Blackboard data
 	 */
-	public LeafTask(Blackboard blackboard) 
+	public Behavior(Blackboard blackboard) 
 	{
 		super(blackboard);
 		CreateController();
@@ -33,7 +33,7 @@ public abstract class LeafTask extends Task
 	 * @param blackboard Reference to the AI Blackboard data
 	 * @param name Name of the class for debugging
 	 */
-	public LeafTask(Blackboard blackboard, String name) 
+	public Behavior(Blackboard blackboard, String name) 
 	{
 		super(blackboard, name);
 		CreateController();

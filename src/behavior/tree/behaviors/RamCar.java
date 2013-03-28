@@ -1,9 +1,9 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 
-public class RamCar extends LeafTask {
+public class RamCar extends Behavior {
 
 	public RamCar(Blackboard blackboard) {
 		super(blackboard);

@@ -1,10 +1,10 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 import behavior.tree.library.Blackboard.Event;
 
-public class DodgeWall extends LeafTask {
+public class DodgeWall extends Behavior {
 
 	int numTurns = 0;
 	int numTurnsDesired = 1;
@@ -34,12 +34,16 @@ public class DodgeWall extends LeafTask {
 
 	@Override
 	public void DoAction() {
-		LogTask("Dodging Wall");
-		// evade takes 1 turn
-		if( numTurns >= numTurnsDesired )
+		
+		// evade takes 2 turn
+		if( numTurns >= numTurnsDesired ) {
+			LogTask("Dodged Wall");
 			GetControl().Succeeded();		
-		else
+		}
+		else {
+			LogTask("Dodging Wall");
 			numTurns++;
+		}
 	}
 	
 

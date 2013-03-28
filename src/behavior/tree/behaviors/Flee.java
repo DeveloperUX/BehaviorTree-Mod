@@ -1,9 +1,9 @@
 package behavior.tree.behaviors;
 
 import behavior.tree.library.Blackboard;
-import behavior.tree.library.LeafTask;
+import behavior.tree.library.Behavior;
 
-public class Flee extends LeafTask {
+public class Flee extends Behavior {
 
 	public Flee(Blackboard blackboard) {
 		super(blackboard);
